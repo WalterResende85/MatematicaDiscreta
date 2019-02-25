@@ -10,7 +10,7 @@ public class MatematicaDiscreta {
 
     public static void main(String[] args) {
         ArrayList<String> linhas = new ArrayList();
-        ArrayList<Conjunto> conjuntos = new ArrayList();
+        
         int c=0;
         Scanner ler = new Scanner(System.in);
 

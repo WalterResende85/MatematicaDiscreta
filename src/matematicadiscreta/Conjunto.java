@@ -12,10 +12,11 @@ import java.util.ArrayList;
  * @author Walter
  */
 public class Conjunto {
-    ArrayList<String> conjunto;
-
-    public Conjunto() {
-        conjunto = new ArrayList();
+    ArrayList<String> conjunto = new ArrayList();
+    String identificador;
+    public Conjunto(String linhas) {
+        identificador = ""+linhas.charAt(0);
+        
     }
 
    
