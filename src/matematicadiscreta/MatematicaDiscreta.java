@@ -8,36 +8,50 @@ import java.util.Scanner;
 
 public class MatematicaDiscreta {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        ArrayList<String> conjunto = new ArrayList();
+        ArrayList<String> linhas = new ArrayList();
+        ArrayList<Conjunto> conjuntos = new ArrayList();
+        int c=0;
         Scanner ler = new Scanner(System.in);
 
-        System.out.printf("Informe o nome de arquivo texto:\n");
-        String nome = ler.nextLine();
+        do {
+            c=0;
+            System.out.printf("Informe o nome de arquivo texto:\n");
+            String nome = ler.nextLine();
 
-        System.out.printf("\nConteúdo do arquivo texto:\n");
-        try {
-            FileReader arq = new FileReader(nome);
-            BufferedReader lerArq = new BufferedReader(arq);
+            System.out.printf("\nConteúdo do arquivo texto:\n");
+            try {
+                FileReader arq = new FileReader(nome);
+                BufferedReader lerArq = new BufferedReader(arq);
 
-            String linha = lerArq.readLine(); // lê a primeira linha
-           
-            while (linha != null) {
-                System.out.printf("%s\n", linha);
+                String linha = lerArq.readLine(); // lê a primeira linha
+                linhas.add(linha);
+                while (linha != null) {
+                    System.out.printf("%s\n", linha);
 
-                linha = lerArq.readLine(); // lê da segunda até a última linha
+                    linha = lerArq.readLine(); // lê da segunda até a última linha
+                    linhas.add(linha);
+                }
+
+                arq.close();
+            } catch (IOException e) {
+                
+            
+                c = 1;
+                System.err.printf("Erro na abertura do arquivo: %s.\n",
+                        e.getMessage());
             }
 
-            arq.close();
-        } catch (IOException e) {
-            System.err.printf("Erro na abertura do arquivo: %s.\n",
-                    e.getMessage());
-        }
+            System.out.println("=====");
+            System.out.println("========================");
+            for (String a : linhas) {
+                System.out.println(a);
 
-        System.out.println();
-    }
+            }
 
+        }while(c==1);
+        
+        
+     
+}
 }
