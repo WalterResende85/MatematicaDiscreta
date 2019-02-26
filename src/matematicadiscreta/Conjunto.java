@@ -7,18 +7,35 @@ package matematicadiscreta;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author Walter
- */
 public class Conjunto {
-    ArrayList<String> conjunto = new ArrayList();
+    ArrayList<Integer> elementos = new ArrayList();
     String identificador;
-    public Conjunto(String linhas) {
-        identificador = ""+linhas.charAt(0);
-        
+    
+    public Conjunto(String linha) {
+        linha = linha.replace(" ","");
+        identificador = ""+linha.charAt(0);
+        String valor ="";
+        for (int i = 0; i < linha.length(); i++) {
+            if(Character.isDigit(linha.charAt(i)) || linha.charAt(i)== '-'){
+                valor += linha.charAt(i);
+            }else if(linha.charAt(i)==',' || linha.charAt(i)=='}'){
+                if(!valor.equals("")){
+                    elementos.add(Integer.parseInt(valor));
+                    valor ="";
+                }
+            }
+        }
     }
-
+    public void imprimeConjunto(){
+        System.out.println("{");
+        for(int i = 0; i <elementos.size(); i++) {
+            System.out.println(elementos.get(i));
+            if(i!=elementos.size()-1){
+                System.out.println(",");
+            }
+        }
+        System.out.println("}");
+    }
    
 
 }
