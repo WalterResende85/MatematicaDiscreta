@@ -36,6 +36,26 @@ public class Conjunto {
         }
         System.out.println("}");
     }
-   
 
+    public ArrayList<Integer> getElementos() {
+        return elementos;
+    }
+
+    public void setElementos(ArrayList<Integer> elementos) {
+        this.elementos = elementos;
+    }
+
+    public String getIdentificador() {
+        return identificador;
+    }
+
+    public void setIdentificador(String identificador) {
+        this.identificador = identificador;
+    }
+    
+   
+@Override
+    public String toString(){
+        return identificador;
+    }
 }
