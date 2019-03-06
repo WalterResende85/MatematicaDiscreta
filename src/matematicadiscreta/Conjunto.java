@@ -26,6 +26,9 @@ public class Conjunto {
             }
         }
     }
+    public Conjunto(){
+        
+    }
     public void imprimeConjunto(){
         System.out.println("{");
         for(int i = 0; i <elementos.size(); i++) {

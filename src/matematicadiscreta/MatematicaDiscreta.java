@@ -74,23 +74,31 @@ public class MatematicaDiscreta {
             }
 
             if (menu == 2) {
-                if(contidoNaocontido(conjuntos.get(0), conjuntos.get(1))){
-                    System.out.println("Está contido");
+                if(contidoNaoContido(conjuntos.get(0), conjuntos.get(1))){
+                    System.out.println(conjuntos.get(0)+" Está contido em "+conjuntos.get(1));
                 }else{
-                    System.out.println("Não está contido");
+                    System.out.println(conjuntos.get(0)+" Não está contido em "+conjuntos.get(1));
                 }
                 
             }
 
             if (menu == 3) {
-
+                if(contidoNaoContido(conjuntos.get(1), conjuntos.get(0))){
+                    System.out.println(conjuntos.get(0)+" Está contido propriamente em "+conjuntos.get(1));
+                }else{
+                    System.out.println(conjuntos.get(0)+" Não está contido propriamente em "+conjuntos.get(1));
+                }
             }
 
             if (menu == 4) {
-
+                System.out.println(
+                        uniaoDeConjuntos(conjuntos).getIdentificador() + "=");
+                        uniaoDeConjuntos(conjuntos).imprimeConjunto();
+                
             }
             if (menu == 5) {
-
+                
+                intersecaoDeConjuntos(conjuntos).imprimeConjunto();
             }
             if (menu == 6) {
 
@@ -123,7 +131,7 @@ public class MatematicaDiscreta {
         return pertence;
     }
 
-    private static boolean contidoNaocontido(Conjunto c1, Conjunto c2) {
+    private static boolean contidoNaoContido(Conjunto c1, Conjunto c2) {
         boolean contido = true;
         for (Integer e : c1.elementos) {
             if (!pertenceNaoPertence(c2, e)) {
@@ -151,5 +159,33 @@ public class MatematicaDiscreta {
          */
 
     }
+private static Conjunto uniaoDeConjuntos(ArrayList<Conjunto> c1){
+  Conjunto uniao = new Conjunto();
+  for(Conjunto c: c1){
+      for(int e: c.elementos){
+          if(!uniao.elementos.contains(e)){
+              uniao.elementos.add(e);
+          } 
+      }
+  }
+  uniao.setIdentificador("Conjunto Uniao");
+  return uniao;
+}
 
+    private static Conjunto intersecaoDeConjuntos(ArrayList<Conjunto> c1){
+        Conjunto intersecao = new Conjunto();
+        Conjunto acumulador = new Conjunto();
+        for(Conjunto c : c1){
+            for(Integer e: c.elementos){
+                acumulador.elementos.add(e);
+                for(int i=0; i<c.elementos.size();i++){
+                     if(acumulador.elementos.get(i)==intersecao.elementos.get(++i)){
+                    intersecao.elementos.add(e);
+                }
+                }
+               
+            }
+        }
+        return intersecao;
+    }
 }
