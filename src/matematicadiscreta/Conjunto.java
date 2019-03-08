@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package matematicadiscreta;
 
 import java.util.ArrayList;
@@ -30,14 +26,14 @@ public class Conjunto {
         
     }
     public void imprimeConjunto(){
-        System.out.println("{");
+        System.out.print("{");
         for(int i = 0; i <elementos.size(); i++) {
-            System.out.println(elementos.get(i));
+            System.out.print(elementos.get(i));
             if(i!=elementos.size()-1){
-                System.out.println(",");
+                System.out.print(",");
             }
         }
-        System.out.println("}");
+        System.out.print("}");
     }
 
     public ArrayList<Integer> getElementos() {
