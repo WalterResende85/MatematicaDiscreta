@@ -2,6 +2,7 @@
 package matematicadiscreta;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Conjunto {
     ArrayList<Integer> elementos = new ArrayList();
@@ -35,6 +36,26 @@ public class Conjunto {
         }
         System.out.print("}");
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+       if(obj instanceof Conjunto){
+           for (int i = 0; i < ((Conjunto) obj).elementos.size(); i++) {
+              if(!this.elementos.contains(((Conjunto) obj).elementos.get(i))){
+                  return false;
+              }
+           }
+           return true;
+    }
+        return false;
+    }
+    
 
     public ArrayList<Integer> getElementos() {
         return elementos;

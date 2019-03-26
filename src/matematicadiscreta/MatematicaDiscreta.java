@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Scanner;
 import java.util.TreeSet;
+import static matematicadiscreta.MenuDois.menuDois;
 import org.apache.commons.lang3.SerializationUtils;
 
 public class MatematicaDiscreta implements Serializable {
@@ -64,14 +65,7 @@ public class MatematicaDiscreta implements Serializable {
             System.out.println("5  - Interseção.");
             System.out.println("6  - Produto cartesiano.");
             System.out.println("7  - Conjunto das partes.");
-            System.out.println("____________________________________________________________");
-            System.out.println("____________________Menu segundo trabalho___________________");
-            System.out.println("8  - Relação MAIOR QUE dos conjuntos A e B.");
-            System.out.println("9  - Relação MENOR QUE dos conjuntos A e B");
-            System.out.println("10 - Relação IGUAL ENTRE dos conjuntos A e B");
-            System.out.println("11 - Relação SER O QUADRADO DE dos conjuntos A e B");
-            System.out.println("12 - Relação SER RAIZ entre os conjuntos A e B");
-
+            System.out.println("8  - MENU DOIS");
             System.out.println("0  - Sair");
             System.out.println("____________________________________________________________");
             System.out.println("____________________________________________________________");
@@ -140,25 +134,7 @@ public class MatematicaDiscreta implements Serializable {
 
             }
             if (menu == 8) {
-                System.out.println("Conjunto A= " + conjuntos.get(0).elementos + "Conjunto B= " + conjuntos.get(1).elementos);
-                System.out.println("Relação MAIOR QUE dos conjuntos A e B. =" + maiorQue(conjuntos));
-                System.out.println(classificador(maiorQue(conjuntos), conjuntos));
-            }
-            if (menu == 9) {
-                System.out.println("Relação MENOR QUE dos conjuntos A e B. =" + menorQue(conjuntos));
-                System.out.println(classificador(menorQue(conjuntos), conjuntos));
-            }
-            if (menu == 10) {
-                System.out.println("Relação IGUAL A dos conjuntos A e B. =" + igualA(conjuntos));
-                System.out.println(classificador(igualA(conjuntos), conjuntos));
-            }
-            if (menu == 11) {
-                System.out.println("Relação SER O QUADRADO DE entre os conjuntos A e B. =" + quadradoDe(conjuntos));
-                System.out.println(classificador(quadradoDe(conjuntos), conjuntos));
-            }
-            if (menu == 12) {
-                System.out.println("Relação SER A RAIZ QUADRADA DE entre os conjuntos A e B. =" + raizDe(conjuntos));
-                System.out.println(classificador(raizDe(conjuntos), conjuntos));
+                menuDois(conjuntos);
             }
 
         } while (menu != 0);
@@ -475,7 +451,18 @@ public class MatematicaDiscreta implements Serializable {
             coletor = "Não Sobrejetora";
             string.add(coletor);
         }
-
+        if(classificadorInjetora && classificadorTotal){
+            coletor = "Monomorfismo";
+            string.add(coletor);
+        }
+        if(classificadorFuncional && classificadorSobrejetora){
+            coletor = "Epimorfismo";
+            string.add(coletor);
+        }
+        if(classificadorInjetora && classificadorTotal && classificadorFuncional && classificadorSobrejetora){
+            coletor = "Isomorfismo";
+            string.add(coletor);
+        }
         return string;
     }
 
@@ -549,8 +536,11 @@ public class MatematicaDiscreta implements Serializable {
             int posicaoVirgula = string.indexOf(",");
             int x = Integer.parseInt(string.substring(0, posicaoVirgula));
             a.elementos.add(x);
-            if (!a.equals(original)) {
+        }
+        for (int i = 0; i < a.elementos.size(); i++) {
+            if (!pertenceNaoPertence(original, a.elementos.get(i))) {
                 total = false;
+                break;
             }
 
         }
@@ -567,8 +557,11 @@ public class MatematicaDiscreta implements Serializable {
             int posicaoVirgula = string.indexOf(",");
             int y = Integer.parseInt(string.substring(posicaoVirgula + 1));
             b.elementos.add(y);
-            if (!b.equals(original)) {
+        }
+        for (int i = 0; i < b.elementos.size(); i++) {
+            if (!pertenceNaoPertence(original, b.elementos.get(i))) {
                 sobrejetora = false;
+                break;
             }
 
         }
