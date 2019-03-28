@@ -63,7 +63,8 @@ public class Composta {
                     }
                 }
                 System.out.println("AoC" + composta);
-                System.out.println(classificador(composta, conjuntos));
+                
+                
             }
             if (opcao1.equalsIgnoreCase(">") && opcao2.equalsIgnoreCase("<")) {
                 ArrayList<String> composta = new ArrayList();
@@ -85,7 +86,7 @@ public class Composta {
                     }
                 }
                 System.out.println("AoC" + composta);
-                System.out.println(classificador(composta, conjuntos));
+                
             }
             if (opcao1.equalsIgnoreCase(">") && opcao2.equalsIgnoreCase("=")) {
                 ArrayList<String> composta = new ArrayList();
@@ -107,7 +108,7 @@ public class Composta {
                     }
                 }
                 System.out.println("AoC" + composta);
-                System.out.println(classificador(composta, conjuntos));
+                
             }
             if (opcao1.equalsIgnoreCase(">") && opcao2.equalsIgnoreCase("Q")) {
                 ArrayList<String> composta = new ArrayList();
@@ -129,7 +130,7 @@ public class Composta {
                     }
                 }
                 System.out.println("AoC" + composta);
-                System.out.println(classificador(composta, conjuntos));
+                
             }
             if (opcao1.equalsIgnoreCase(">") && opcao2.equalsIgnoreCase("R")) {
                 ArrayList<String> composta = new ArrayList();
@@ -151,7 +152,7 @@ public class Composta {
                     }
                 }
                 System.out.println("AoC" + composta);
-                System.out.println(classificador(composta, conjuntos));
+                
             }
 //______________________________________________________________________________________________________________________
 //Menor que
@@ -176,7 +177,7 @@ public class Composta {
                     }
                 }
                 System.out.println("AoC" + composta);
-                System.out.println(classificador(composta, conjuntos));
+                
             }
             if (opcao1.equalsIgnoreCase("<") && opcao2.equalsIgnoreCase("<")) {
                 ArrayList<String> composta = new ArrayList();
@@ -198,7 +199,7 @@ public class Composta {
                     }
                 }
                 System.out.println("AoC" + composta);
-                System.out.println(classificador(composta, conjuntos));
+                
             }
 
             if (opcao1.equalsIgnoreCase("<") && opcao2.equalsIgnoreCase("=")) {
@@ -221,7 +222,7 @@ public class Composta {
                     }
                 }
                 System.out.println("AoC" + composta);
-                System.out.println(classificador(composta, conjuntos));
+                
             }
             if (opcao1.equalsIgnoreCase("<") && opcao2.equalsIgnoreCase("Q")) {
                 ArrayList<String> composta = new ArrayList();
@@ -243,7 +244,7 @@ public class Composta {
                     }
                 }
                 System.out.println("AoC" + composta);
-                System.out.println(classificador(composta, conjuntos));
+                
             }
             if (opcao1.equalsIgnoreCase("<") && opcao2.equalsIgnoreCase("R")) {
                 ArrayList<String> composta = new ArrayList();
@@ -265,7 +266,7 @@ public class Composta {
                     }
                 }
                 System.out.println("AoC" + composta);
-                System.out.println(classificador(composta, conjuntos));
+                
             }
 //____________________________________________________________________________________________________________________
 //IGUAL A
@@ -291,7 +292,7 @@ public class Composta {
                     }
                 }
                 System.out.println("AoC" + composta);
-                System.out.println(classificador(composta, conjuntos));
+                
             }
             if (opcao1.equalsIgnoreCase("=") && opcao2.equalsIgnoreCase("<")) {
                 ArrayList<String> composta = new ArrayList();
@@ -313,7 +314,7 @@ public class Composta {
                     }
                 }
                 System.out.println("AoC" + composta);
-                System.out.println(classificador(composta, conjuntos));
+                
             }
             if (opcao1.equalsIgnoreCase("=") && opcao2.equalsIgnoreCase("=")) {
                 ArrayList<String> composta = new ArrayList();
@@ -357,7 +358,7 @@ public class Composta {
                     }
                 }
                 System.out.println("AoC" + composta);
-                System.out.println(classificador(composta, conjuntos));
+                
             }
             if (opcao1.equalsIgnoreCase("=") && opcao2.equalsIgnoreCase("R")) {
                 ArrayList<String> composta = new ArrayList();
@@ -379,7 +380,7 @@ public class Composta {
                     }
                 }
                 System.out.println("AoC" + composta);
-                System.out.println(classificador(composta, conjuntos));
+                
             }
 //_______________________________________________________________________________________________________________________
 //Quadrado de
@@ -404,7 +405,7 @@ public class Composta {
                     }
                 }
                 System.out.println("AoC" + composta);
-                System.out.println(classificador(composta, conjuntos));
+                
             }
             if (opcao1.equalsIgnoreCase("Q") && opcao2.equalsIgnoreCase("<")) {
                 ArrayList<String> composta = new ArrayList();
@@ -426,7 +427,7 @@ public class Composta {
                     }
                 }
                 System.out.println("AoC" + composta);
-                System.out.println(classificador(composta, conjuntos));
+                
             }
             if (opcao1.equalsIgnoreCase("Q") && opcao2.equalsIgnoreCase("=")) {
                 ArrayList<String> composta = new ArrayList();
@@ -448,7 +449,7 @@ public class Composta {
                     }
                 }
                 System.out.println("AoC" + composta);
-                System.out.println(classificador(composta, conjuntos));
+                
             }
             if (opcao1.equalsIgnoreCase("Q") && opcao2.equalsIgnoreCase("Q")) {
                 ArrayList<String> composta = new ArrayList();
@@ -470,7 +471,7 @@ public class Composta {
                     }
                 }
                 System.out.println("AoC" + composta);
-                System.out.println(classificador(composta, conjuntos));
+                
             }
             if (opcao1.equalsIgnoreCase("Q") && opcao2.equalsIgnoreCase("R")) {
                 ArrayList<String> composta = new ArrayList();
@@ -492,7 +493,7 @@ public class Composta {
                     }
                 }
                 System.out.println("AoC" + composta);
-                System.out.println(classificador(composta, conjuntos));
+                
             }
 //__________________________________________________________________________________________________________________
 //Raiz de
@@ -517,7 +518,7 @@ public class Composta {
                     }
                 }
                 System.out.println("AoC" + composta);
-                System.out.println(classificador(composta, conjuntos));
+                
             }
             if (opcao1.equalsIgnoreCase("R") && opcao2.equalsIgnoreCase("<")) {
                 ArrayList<String> composta = new ArrayList();
@@ -539,7 +540,7 @@ public class Composta {
                     }
                 }
                 System.out.println("AoC" + composta);
-                System.out.println(classificador(composta, conjuntos));
+                
             }
             if (opcao1.equalsIgnoreCase("R") && opcao2.equalsIgnoreCase("=")) {
                 ArrayList<String> composta = new ArrayList();
@@ -561,7 +562,7 @@ public class Composta {
                     }
                 }
                 System.out.println("AoC" + composta);
-                System.out.println(classificador(composta, conjuntos));
+                
             }
             if (opcao1.equalsIgnoreCase("R") && opcao2.equalsIgnoreCase("Q")) {
                 ArrayList<String> composta = new ArrayList();
@@ -583,7 +584,7 @@ public class Composta {
                     }
                 }
                 System.out.println("AoC" + composta);
-                System.out.println(classificador(composta, conjuntos));
+                
             }
             if (opcao1.equalsIgnoreCase("R") && opcao2.equalsIgnoreCase("R")) {
                 ArrayList<String> composta = new ArrayList();
@@ -605,7 +606,7 @@ public class Composta {
                     }
                 }
                 System.out.println("AoC" + composta);
-                System.out.println(classificador(composta, conjuntos));
+                
             }
             System.out.println("0  - SAIR");
             menu = ler.nextInt();
